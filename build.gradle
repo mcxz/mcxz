@@ -31,7 +31,7 @@ minecraft {
 jar
 {
     manifest {
-        attributes 'FMLCorePlugin': '',
+        attributes 'FMLCorePlugin': 'org.mcxz.mcxz.asm.Plugin',
 		           'FMLCorePluginContainsFMLMod': 'true'
     }
 }
