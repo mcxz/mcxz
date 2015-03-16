@@ -1,6 +1,5 @@
 package org.mcxz.mcxz;
 
-import lain.mods.helper.network.NetworkManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -9,6 +8,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
 import org.mcxz.mcxz.init.InitProxy;
+import org.mcxz.mcxz.network.NetworkManager;
 
 @Mod(modid = "mcxz", useMetadata = true)
 public class MCXZ
