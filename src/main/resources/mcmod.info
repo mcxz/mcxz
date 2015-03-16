@@ -10,7 +10,7 @@
     "updateUrl": "",
     "authorList": ["zlainsama", "crafteverywhere"],
     "credits": "",
-    "logoFile": "/dao_logo.png",
+    "logoFile": "assets/mcxz/textures/gui/logo.png",
     "screenshots": [],
     "parent": "",
     "requiredMods": ["Forge"],

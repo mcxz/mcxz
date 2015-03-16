@@ -23,11 +23,7 @@ archivesBaseName = "mcxz"
 
 minecraft {
     version = "1.8-11.14.1.1337"
-    if (file('../run').exists()) {
-        runDir = "../run"
-    } else {
-        runDir = "run"
-    }
+    runDir = "run"
 
     mappings = "snapshot_20141130"
 }
