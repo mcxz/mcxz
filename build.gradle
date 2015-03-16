@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "0.1"
+version = "1.8-0.1"
 group= "org.mcxz.mcxz"
 archivesBaseName = "mcxz"
 
