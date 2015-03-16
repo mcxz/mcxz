@@ -1,0 +1,21 @@
+{
+  "modListVersion": 2,
+  "modList": [{
+    "modid": "mcxz",
+    "name": "Minecraft XiuZhen",
+    "description": "",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://github.com/mcxz/mcxz",
+    "updateUrl": "",
+    "authorList": ["zlainsama", "crafteverywhere"],
+    "credits": "",
+    "logoFile": "/dao_logo.png",
+    "screenshots": [],
+    "parent": "",
+    "requiredMods": ["Forge"],
+    "dependencies": [],
+    "dependants": [],
+    "useDependencyInformation": true
+  }]
+}
