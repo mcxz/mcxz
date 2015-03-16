@@ -4,7 +4,7 @@ import java.util.Map;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
 @IFMLLoadingPlugin.Name("mcxz.asm")
-@IFMLLoadingPlugin.MCVersion("")
+@IFMLLoadingPlugin.MCVersion("1.8")
 @IFMLLoadingPlugin.TransformerExclusions("org.mcxz.mcxz.asm.")
 public class Plugin implements IFMLLoadingPlugin
 {
