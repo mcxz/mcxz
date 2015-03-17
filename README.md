@@ -9,7 +9,7 @@ Here you can find the source and issue tracker for the **Official MCXZ Project**
 
 MCXZ(which means 挖矿与修真 in Chinese) is a mod written for the very popular sandbox game [Minecraft](https://minecraft.net/). It is built on top of the [Minecraft Forge](https://github.com/MinecraftForge) API.
 
-It tries to expands and improves the original Minecraft greatly by adding many new systems, blocks, entities, and features about the ancient Chinese's myth and fable.
+It tries to expand and improve the original Minecraft greatly by adding many new systems, blocks, entities, and features about the ancient Chinese's myth and fable.
 
 It's still in early development, and currently maintained by [zlainsama](https://github.com/zlainsama).
 
