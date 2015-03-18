@@ -17,9 +17,14 @@ public class Meridian
         return this;
     }
 
+    public AcuPoint getAcuPoint(AcuPoint acupoint)
+    {
+        return this.acupoints.get(acupoint.getUnlocalizedName());
+    }
+
     public AcuPoint getAcuPoint(String name)
     {
-        return acupoints.get(name);
+        return this.acupoints.get(name);
     }
 
     public Collection<AcuPoint> getAcuPoints()
