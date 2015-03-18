@@ -1,4 +1,4 @@
-package org.mcxz.mcxz.common.body;
+package org.mcxz.mcxz.lib.body;
 
 public class Skill
 {
