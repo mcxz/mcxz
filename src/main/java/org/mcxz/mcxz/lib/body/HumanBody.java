@@ -9,11 +9,18 @@ public class HumanBody
 {
 
     private Map<String, Meridian> meridians = Maps.newHashMap();
+    private Map<String, Parameter> parameters = Maps.newHashMap();
     private Map<String, Skill> skills = Maps.newHashMap();
 
     public HumanBody addMeridian(Meridian meridian)
     {
         this.meridians.put(meridian.getUnlocalizedName(), meridian);
+        return this;
+    }
+
+    public HumanBody addParameter(Parameter parameter)
+    {
+        this.parameters.put(parameter.getUnlocalizedName(), parameter);
         return this;
     }
 
@@ -36,6 +43,21 @@ public class HumanBody
     public Collection<Meridian> getMeridians()
     {
         return Collections.unmodifiableCollection(this.meridians.values());
+    }
+
+    public Parameter getParameter(Parameter parameter)
+    {
+        return this.parameters.get(parameter.getUnlocalizedName());
+    }
+
+    public Parameter getParameter(String name)
+    {
+        return this.parameters.get(name);
+    }
+
+    public Collection<Parameter> getParameters()
+    {
+        return Collections.unmodifiableCollection(this.parameters.values());
     }
 
     public Skill getSkill(Skill skill)
