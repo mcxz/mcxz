@@ -3,6 +3,7 @@ package org.mcxz.mcxz.lib.body;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
+import org.mcxz.mcxz.lib.state.State;
 import com.google.common.collect.Maps;
 
 public class HumanBody
@@ -11,6 +12,7 @@ public class HumanBody
     private Map<String, Meridian> meridians = Maps.newHashMap();
     private Map<String, Parameter> parameters = Maps.newHashMap();
     private Map<String, Skill> skills = Maps.newHashMap();
+    private Map<String, State> states = Maps.newHashMap();
 
     public HumanBody addMeridian(Meridian meridian)
     {
@@ -27,6 +29,12 @@ public class HumanBody
     public HumanBody addSkill(Skill skill)
     {
         this.skills.put(skill.getUnlocalizedName(), skill);
+        return this;
+    }
+
+    public HumanBody addState(State state)
+    {
+        this.states.put(state.getUnlocalizedName(), state);
         return this;
     }
 
@@ -73,6 +81,21 @@ public class HumanBody
     public Collection<Skill> getSkills()
     {
         return Collections.unmodifiableCollection(this.skills.values());
+    }
+
+    public State getState(State state)
+    {
+        return this.states.get(state.getUnlocalizedName());
+    }
+
+    public State getState(String name)
+    {
+        return this.states.get(name);
+    }
+
+    public Collection<State> getStates()
+    {
+        return Collections.unmodifiableCollection(this.states.values());
     }
 
 }
