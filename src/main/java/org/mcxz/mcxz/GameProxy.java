@@ -3,12 +3,18 @@ package org.mcxz.mcxz;
 import java.io.File;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraftforge.common.IExtendedEntityProperties;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
+import org.mcxz.mcxz.status.PlayerStatus;
+import org.mcxz.mcxz.status.PlayerStatusServer;
 import org.mcxz.mcxz.utils.DataStorage;
+import org.mcxz.mcxz.utils.DataStorageAttachment;
 import org.mcxz.mcxz.utils.MinecraftUtils;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
@@ -56,6 +62,22 @@ public class GameProxy
         if (!doLoad)
             return stores.getIfPresent(file);
         return stores.getUnchecked(file);
+    }
+
+    public PlayerStatus getPlayerStatus(EntityPlayer player)
+    {
+        if (player instanceof EntityPlayerMP)
+        {
+            IExtendedEntityProperties obj = player.getExtendedProperties(PlayerStatus.ID);
+            if (obj == null)
+                player.registerExtendedProperties(PlayerStatus.ID, obj = new PlayerStatusServer());
+            if (obj instanceof DataStorageAttachment)
+                getPlayerDataStorage(player.getUniqueID(), true).registerAttachmentObject(PlayerStatus.ID, (DataStorageAttachment) obj);
+            if (obj instanceof PlayerStatus)
+                return (PlayerStatus) obj;
+            return null;
+        }
+        return null;
     }
 
     public DataStorage getWorldDataStorage()
