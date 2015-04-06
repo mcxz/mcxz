@@ -75,9 +75,9 @@ public class GameProxy
                 getPlayerDataStorage(player.getUniqueID(), true).registerAttachmentObject(PlayerStatus.ID, (DataStorageAttachment) obj);
             if (obj instanceof PlayerStatus)
                 return (PlayerStatus) obj;
-            return null;
+            return PlayerStatus.DUMMY;
         }
-        return null;
+        return PlayerStatus.DUMMY;
     }
 
     public DataStorage getWorldDataStorage()

@@ -20,7 +20,7 @@ public class GameProxyClient extends GameProxy
                 player.registerExtendedProperties(PlayerStatus.ID, obj = new PlayerStatusClient());
             if (obj instanceof PlayerStatus)
                 return (PlayerStatus) obj;
-            return null;
+            return PlayerStatus.DUMMY;
         }
         return super.getPlayerStatus(player);
     }
