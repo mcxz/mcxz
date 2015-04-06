@@ -6,7 +6,7 @@ import java.util.Map;
 import org.mcxz.mcxz.lib.state.State;
 import com.google.common.collect.Maps;
 
-public class HumanBody extends Body
+public class HumanBody
 {
 
     private Map<String, Meridian> meridians = Maps.newHashMap();
